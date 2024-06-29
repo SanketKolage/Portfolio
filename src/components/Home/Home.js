@@ -13,17 +13,20 @@ function Home() {
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 1 }} className="heading">
+            <h1 style={{ fontSize: "2.6em"  }}>
+              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+            </h1>
+              <h3 style={{ paddingBottom: 1,marginTop:"2rem " ,fontSize: "1.8em"}} className="heading">
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
-              </h1>
+              </h3>
 
-              <h1 className="heading-name">
+              <h3 className="heading-name">
                 I'M
                 <strong className="main-name"> Sanket Kolage</strong>
-              </h1>
+              </h3>
 
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />

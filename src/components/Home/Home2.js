@@ -4,8 +4,7 @@ import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
+ 
   
 } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
@@ -16,10 +15,8 @@ function Home2() {
     <Container fluid className="home-about-section" id="about">
       <Container>
         <Row>
-          <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
-            </h1>
+          <Col md={8} className="home-about-description" style={{"margin-top": "-320px"}}>
+            
             <p className="home-about-body" >
               I fell in love with programming and I have at least learnt
               something, I think… 🤷‍♂️
