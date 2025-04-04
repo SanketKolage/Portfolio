@@ -3,8 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import Netflix from "../../Assets/Projects/NetflixUI.jfif";
-import Chat from "../../Assets/Projects/ChatUIDesign.jfif";
-import ecommerce from "../../Assets/Projects/eCommerce Website.jfif";
+import task from "../../Assets/Projects/taskmanager.png";
+import editor from "../../Assets/Projects/codeEditor.png";
 
 
 function Projects() {
@@ -19,42 +19,59 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          {/* Netflix Clone */}
+
+          {/* AI Code Reviewer */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={editor}
+              isBlog={false}
+              title="AI Code Reviewer"
+              description="AI-powered code review system that analyzes code, identifies issues, and provides improvement suggestions. Features real-time feedback, user authentication, and a web-based interface. Hosted on Render."
+              ghLinks={[
+                {
+                  url: "https://github.com/SanketKolage/AI-code-reviewer-frontend",
+                  label: "Frontend",
+                },
+                {
+                  url: "https://github.com/SanketKolage/AI-code-reviewer-backend",
+                  label: "Backend",
+                },
+              ]}
+              demoLink="https://ai-code-reviewer-frontend.netlify.app/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={task}
+              isBlog={false}
+              title="Task Manager App"
+              description="A MERN Stack Task Management Project is a web application that allows users to create, manage, and track tasks efficiently.
+                It uses MongoDB for data storage, Express.js for server-side operations, React.js for a dynamic front-end interface, and Node.js to handle server logic.
+               ."
+              ghLinks={[
+                {
+                  url: "https://github.com/SanketKolage/Task-Manager-Frontend",
+                  label: "Frontend",
+                },
+                {
+                  url: "https://github.com/SanketKolage/Task-Manager-Backend",
+                  label: "Backend",
+                },
+              ]}
+              demoLink="https://front-end-task-manager.netlify.app/"
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={Netflix}
               isBlog={false}
-              title="Netflix clone using react js"
-              description="Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices. try to clone the Netflix website.  - React js | API | JSON | Bootstrap"
-              // ghLink=""
-              // demoLink=""
+              title="Netflix  UI Clone"
+              description="A Netflix UI clone built with React.js, showcasing a dynamic interface with API-driven content. Features responsive design, Bootstrap styling, and JSON-based data handling."
+              demoLink="https://netfix-ui-sanketkolages-projects.vercel.app/"
             />
           </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={Chat}
-              isBlog={false}
-              title="Real time Chat application using react js"
-              description="In the app, we will allow the user to log in with their Google account using Firebase's Google
-sign-in Authentication. We will also store and retrieve all the chatroom messages using
-Firebase's Cloud Firestore - JavaScript | Node.js | Socket.io |Bootstrap"
-              // ghLink=""
-              // demoLink=""
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={ecommerce}
-              isBlog={false}
-              title="E-commerce website"
-              description="This e-commerce website is a modern, responsive web application built with React, designed to provide a seamless and intuitive shopping experience. Users can browse and search for products, manage their shopping cart.  Leveraging the latest React features, this project ensures a dynamic and efficient user experience."
-              // ghLink=""
-              // demoLink=""              
-            />
-          </Col>
-
-          
         </Row>
       </Container>
     </Container>
